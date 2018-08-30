@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<!-- to activate annotations in beans already registered in the ApplicationContext -->
+	<context:annotation-config />
+
+	<!-- scans packages to find and register beans within the application context -->
+	<context:component-scan
+		base-package="ir.refine_punishment" />
+
+	<!-- Article Related -->
+	<bean class="ir.chetori.article.dao.ArticleDAO" />
+	<bean class="ir.chetori.article.catalogue.ArticleCatalogue" />
+
+	<!-- User Related -->
+	<bean class="ir.chetori.user.catalogue.UserCatalogue" />
+	<bean class="ir.chetori.user.dao.UserDAO" />
+
+	<!-- Category Related -->
+	<bean class="ir.chetori.category.catalogue.CategoryCatalogue" />
+
+	<bean class="ir.chetori.category.dao.CategoryDAO" />
+
+</beans>
