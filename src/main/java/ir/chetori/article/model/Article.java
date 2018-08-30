@@ -7,7 +7,7 @@ public class Article extends BaseEntity {
 	public Article() {
 
 	}
-
+	
 	@EntityField
 	private String name;
 	@EntityField

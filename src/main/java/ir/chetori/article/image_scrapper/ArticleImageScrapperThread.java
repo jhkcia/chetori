@@ -7,6 +7,7 @@ import ir.chetori.article.model.Article;
 import ir.chetori.core.EntityEnrichException;
 import ir.chetori.core.EntityEnricherThread;
 
+
 public class ArticleImageScrapperThread extends EntityEnricherThread<Article, ImageCrawlResult> {
 
 
@@ -23,7 +24,7 @@ public class ArticleImageScrapperThread extends EntityEnricherThread<Article, Im
 	@Override
 	public ImageCrawlResult doEnrich(Article item) throws EntityEnrichException {
 		// TODO Auto-generated method stub
-		return null;
+		return ArticleImageScrapper.fetchImages();
 	}
 
 	@Override
