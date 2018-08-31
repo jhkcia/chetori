@@ -1,11 +1,8 @@
 package ir.chetori.category.dao;
 
-import java.util.ArrayList;
-
-import org.bson.Document;
+import java.util.List;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.client.MongoCursor;
 
 import ir.chetori.category.model.Category;
 import ir.chetori.core.BaseEntityDAO;
@@ -25,22 +22,15 @@ public class CategoryDAO extends BaseEntityDAO<Category> {
 
 	public Category getDirtyCategory() {
 		try {
-			return getByFieldValue("isSubCategoriesCrawled", false);
+			return getByFieldValue("isSubCategoriesCrawled", false).get(0);
 		} catch (Exception e) {
 			return null;
 		}
 	}
 
-	public ArrayList<Category> getByParentHref(String parentHref)
+	public List<Category> getByParentHref(String parentHref)
 			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		BasicDBObject searchQuery = new BasicDBObject("parentHref", parentHref);
-		MongoCursor<Document> result = getCollection().find(searchQuery).iterator();
-		ArrayList<Category> out = new ArrayList<>();
-		while (result.hasNext()) {
-			Document item = result.next();
-			out.add(convert(item));
-		}
-		return out;
+		return getByFieldValue("parentHref", parentHref);
 	}
 
 	public long count() {
@@ -53,7 +43,7 @@ public class CategoryDAO extends BaseEntityDAO<Category> {
 
 	public Category getByHref(String href) {
 		try {
-			return getByFieldValue("href", href);
+			return getByFieldValue("href", href).get(0);
 		} catch (Exception e) {
 			return null;
 			// TODO: handle exception

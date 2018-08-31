@@ -1,5 +1,6 @@
 package ir.chetori.core.api;
 
+import javax.ws.rs.BadRequestException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
@@ -13,6 +14,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 
 import ir.chetori.core.auth.SecuredEndPoint;
 import ir.chetori.core.catalogue.BaseCatalogue;
@@ -51,6 +53,8 @@ public abstract class BaseEndPoint<T extends BaseEntity> {
 	@SecuredEndPoint({ Role.ADMIN })
 	public T get(@QueryParam("id") String id)
 			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
+		if (StringUtils.isEmpty(id))
+			throw new BadRequestException("id field can not be null");
 		return getCatalogue().getById(id);
 	}
 
@@ -80,5 +84,7 @@ public abstract class BaseEndPoint<T extends BaseEntity> {
 		getCatalogue().update(entity);
 		return getCatalogue().getById(entity.getId());
 	}
-
+	private void createException() {
+		
+	}
 }

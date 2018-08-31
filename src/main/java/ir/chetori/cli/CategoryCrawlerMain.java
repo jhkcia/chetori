@@ -2,6 +2,7 @@ package ir.chetori.cli;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import ir.chetori.article.catalogue.ArticleCatalogue;
 import ir.chetori.category.catalogue.CategoryCatalogue;
@@ -43,7 +44,7 @@ public class CategoryCrawlerMain {
 
 	public void printSubCategories(Category item, int intent)
 			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		ArrayList<Category> items = CategoryDAO.getInstance().getByParentHref(item.getHref());
+		List<Category> items = CategoryDAO.getInstance().getByParentHref(item.getHref());
 		String prefix = "";
 		for (int i = 0; i < intent; i++) {
 			prefix += "\t";

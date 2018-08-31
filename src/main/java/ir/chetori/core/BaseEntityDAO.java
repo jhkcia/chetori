@@ -1,17 +1,16 @@
 package ir.chetori.core;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.UUID;
 
-import org.bson.Document;
+import org.mongodb.morphia.Datastore;
+import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.query.Query;
 
-import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
 
 import ir.chetori.core.api.PageList;
 import ir.chetori.core.entity.BaseEntity;
@@ -27,74 +26,89 @@ public abstract class BaseEntityDAO<T extends BaseEntity> {
 		getCollection().drop();
 	}
 
-	public Document convert(T entity) throws IllegalArgumentException, IllegalAccessException {
-		Document document = new Document();
-		for (Field field : entity.getClass().getDeclaredFields()) {
-			if (field.isAnnotationPresent(EntityField.class)) {
-				String key = field.getName();
-				field.setAccessible(true);
-				Object value = field.get(entity);
-				document.append(key, value);
-			}
-		}
-		document.append("_id", entity.getId());
-		return document;
-	}
-
-	public T convert(Document document)
-			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		if (document == null)
-			return null;
-		T t = clazz.newInstance();
-		document.keySet();
-		for (String key : document.keySet()) {
-			if ("_id".equals(key)) {
-				t.setId(document.getString("_id"));
-			} else {
-				Field declaredField = clazz.getDeclaredField(key);
-				boolean accessible = declaredField.isAccessible();
-
-				declaredField.setAccessible(true);
-				declaredField.set(t, document.get(key));
-				declaredField.setAccessible(accessible);
-
-			}
-		}
-		return t;
-	}
-
+	/*
+	 * public Document convert(T entity) throws IllegalArgumentException,
+	 * IllegalAccessException { Document document = new Document(); for (Field field
+	 * : entity.getClass().getDeclaredFields()) { if
+	 * (field.isAnnotationPresent(EntityField.class)) { String key =
+	 * field.getName(); field.setAccessible(true); Object value = field.get(entity);
+	 * document.append(key, value); } } document.append("_id", entity.getId());
+	 * return document; }
+	 * 
+	 * public T convert(Document document) throws InstantiationException,
+	 * IllegalAccessException, NoSuchFieldException, SecurityException { if
+	 * (document == null) return null; T t = clazz.newInstance(); document.keySet();
+	 * for (String key : document.keySet()) { if ("_id".equals(key)) {
+	 * t.setId(document.getString("_id")); } else { Field declaredField =
+	 * clazz.getDeclaredField(key); boolean accessible =
+	 * declaredField.isAccessible();
+	 * 
+	 * declaredField.setAccessible(true); declaredField.set(t, document.get(key));
+	 * declaredField.setAccessible(accessible);
+	 * 
+	 * } } return t; }
+	 */
 	public String getCollectionName() {
-		return clazz.getSimpleName();
+		return getCollection().getName();
 	}
 
-	private static MongoDatabase mongoDb = new MongoClient("localhost", 27017).getDatabase("testdb");
+	// private static MongoDatabase mongoDb = new MongoClient("localhost",
+	// 27017).getDatabase("testdb");
+
+	private static Datastore dataStore = null;
+
+	protected static Datastore getDataStore() {
+		if (dataStore == null) {
+			final Morphia morphia = new Morphia();
+
+			// tell Morphia where to find your classes
+			// can be called multiple times with different packages or classes
+			morphia.mapPackage("ir.chetori.article.model");
+
+			// create the Datastore connecting to the default port on the local host
+			dataStore = morphia.createDatastore(new MongoClient("localhost", 27017), "testdb");
+			dataStore.ensureIndexes();
+		}
+		return dataStore;
+	}
 
 	public void add(T entity) throws IllegalArgumentException, IllegalAccessException {
 		if (entity.getId() == null)
 			entity.setId(generateNewId());
-		Document document = convert(entity);
-		getCollection().insertOne(document);
+		getDataStore().save(entity);
+		// Document document = convert(entity);
+		// getCollection().insertOne(document);
 	}
 
 	private String generateNewId() {
 		return UUID.randomUUID().toString();
 	}
 
-	protected MongoCollection<Document> getCollection() {
-		return mongoDb.getCollection(getCollectionName());
+	protected DBCollection getCollection() {
+		return getDataStore().getCollection(clazz);
 	}
 
-	public T getById(String value)
-			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		return getByFieldValue("_id", value);
+	public T getById(String value) {
+		return getByFieldValue("_id", value).get(0);
 	}
 
-	public T getByFieldValue(String fieldName, Object value)
-			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		BasicDBObject searchQuery = new BasicDBObject();
-		searchQuery.put(fieldName, value);
-		Document item = getCollection().find(searchQuery).first();
-		return convert(item);
+	public List<T> getByFieldValues(HashMap<String, Object> fieldValues) {
+		final Query<T> query = getDataStore().createQuery(clazz);
+		for (Entry<String, Object> t : fieldValues.entrySet()) {
+			query.field(t.getKey()).equal(t.getValue());
+		}
+		return query.asList();
+	}
+
+	public List<T> getByFieldValue(String fieldName, Object value) {
+		final Query<T> query = getDataStore().createQuery(clazz).field(fieldName).equal(value);
+		return query.asList();
+
+		/*
+		 * BasicDBObject searchQuery = new BasicDBObject(); searchQuery.put(fieldName,
+		 * value); Document item = getCollection().find(searchQuery).first(); return
+		 * convert(item);
+		 */
 	}
 
 	public void update(T item) throws IllegalArgumentException, IllegalAccessException {
@@ -103,37 +117,32 @@ public abstract class BaseEntityDAO<T extends BaseEntity> {
 	}
 
 	public void delete(String id) {
-		BasicDBObject searchQuery = new BasicDBObject();
-		searchQuery.put("_id", id);
-		getCollection().deleteOne(searchQuery);
+		delete(getById(id));
 	}
 
 	public void delete(T item) {
-		delete(item.getId());
+		getDataStore().delete(item);
 	}
 
-	public PageList<T> getPage(int pageNumber, int pageSize) throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		MongoCursor<Document> result = getCollection().find().skip((pageNumber-1)*pageSize).limit(pageSize).iterator();
-		List<T> outList = new ArrayList<>();
-		while (result.hasNext()) {
-			outList.add(convert(result.next()));
-		}
-		return new PageList<T>(count(), outList);
-		
-	}
-
-	public List<T> getAll()
+	public PageList<T> getPage(int pageNumber, int pageSize)
 			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		MongoCursor<Document> result = getCollection().find().iterator();
-		List<T> outList = new ArrayList<>();
-		while (result.hasNext()) {
-			outList.add(convert(result.next()));
-		}
-		return outList;
+
+		final Query<T> query = getDataStore().createQuery(clazz).offset((pageNumber - 1) * pageSize).limit(pageSize);
+		List<T> outList = query.asList();
+		return new PageList<T>(count(), outList);
+	}
+
+	public List<T> getAll() {
+
+		final Query<T> query = getDataStore().createQuery(clazz);
+		return query.asList();
+
+		// return getCollection().find(new Document(), clazz).into(new ArrayList<T>());
 	}
 
 	public long count() {
-		return getCollection().count();
+		final Query<T> query = getDataStore().createQuery(clazz);
+		return query.countAll();
 	}
 
 }

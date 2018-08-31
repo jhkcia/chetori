@@ -1,6 +1,6 @@
 package ir.chetori.article.catalogue;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,7 +13,6 @@ public class ArticleCatalogue extends BaseCatalogue<Article> {
 	ArticleDAO dao;
 
 	public Article getNotExtractedArticle() {
-		// TODO Auto-generated method stub
 		return dao.getNotExtractedArticle();
 	}
 
@@ -23,7 +22,6 @@ public class ArticleCatalogue extends BaseCatalogue<Article> {
 
 	public Article getDirtyArticle()
 			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		// TODO Auto-generated method stub
 		return dao.getDirtyArticle();
 	}
 
@@ -35,20 +33,18 @@ public class ArticleCatalogue extends BaseCatalogue<Article> {
 		return dao.getByHref(href);
 	}
 
-	public void resetExtractors() {
-		dao.resetExtractors();
+//	public void resetExtractors() {
+//		dao.resetExtractors();
+//
+//	}
 
-	}
 
-
-	public ArrayList<Article> getArticlesByCategory(String categoryHref)
+	public List<Article> getArticlesByCategory(String categoryHref)
 			throws InstantiationException, IllegalAccessException, NoSuchFieldException, SecurityException {
-		// TODO Auto-generated method stub
 		return dao.getArticlesByCategory(categoryHref);
 	}
 
 	public Article getNotImageCrawledArticle() {
-		// TODO Auto-generated method stub
 		return dao.getNotImageCrawledArticle();
 	}
 

@@ -1,62 +1,103 @@
 package ir.chetori.article.model;
 
-import ir.chetori.core.EntityField;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Property;
+
 import ir.chetori.core.entity.BaseEntity;
+
+@Entity("Article")
 
 public class Article extends BaseEntity {
 	public Article() {
 
 	}
-	
-	@EntityField
+
+	@Property("name")
 	private String name;
-	@EntityField
+	@Property("href")
 	private String href;
-	@EntityField
+	@Property("src")
+
 	private String src;
-	
-	@EntityField
+
+	@Property("categoryHref")
+
 	private String categoryHref;
 
-	@EntityField
+	@Property("otherCategoryHref")
+
 	private String otherCategoryHref;
 
-	@EntityField
+	@Property("isFullyCrawled")
+
 	private boolean isFullyCrawled;
-	@EntityField
+
+	@Property("isImagesCrawled")
+
 	private boolean isImagesCrawled;
-	@EntityField
+
+	@Property("isSourceExtracted")
+
 	private boolean isSourceExtracted;
-	@EntityField
+
+	@Property("source")
+
 	private String source;
 
-	@EntityField
+	@Property("introduction")
+
 	private String introduction;
-	@EntityField
+
+	@Property("introductionFa")
+
 	private String introductionFa;
-	@EntityField
+
+	@Property("steps")
+
 	private String steps;
-	@EntityField
+
+	@Property("stepsFa")
+
 	private String stepsFa;
-	@EntityField
+
+	@Property("tips")
+
 	private String tips;
-	@EntityField
+
+	@Property("tipsFa")
+
 	private String tipsFa;
-	@EntityField
+
+	@Property("warnings")
+
 	private String warnings;
-	@EntityField
+
+	@Property("warningsFa")
+
 	private String warningsFa;
-	@EntityField
+
+	@Property("thingsYouNeed")
+
 	private String thingsYouNeed;
-	@EntityField
+
+	@Property("thingsYouNeedFa")
+
 	private String thingsYouNeedFa;
-	@EntityField
+
+	@Property("related")
+
 	private String related;
-	@EntityField
+
+	@Property("relatedFa")
+
 	private String relatedFa;
-	@EntityField
+
+	@Property("citations")
+
 	private String citations;
-	@EntityField
+
+	@Property("citationsFa")
+
 	private String citationsFa;
 
 	public String getName() {
@@ -221,8 +262,14 @@ public class Article extends BaseEntity {
 
 	@Override
 	public String toString() {
-		return "ArticleFirstDTO [name=" + name + ", href=" + href + ", src=" + src + ", categoryHref=" + categoryHref
-				+ ", isFullyCrawled=" + isFullyCrawled + ", source=" + source + "]";
+		return "Article [name=" + name + ", href=" + href + ", src=" + src + ", categoryHref=" + categoryHref
+				+ ", otherCategoryHref=" + otherCategoryHref + ", isFullyCrawled=" + isFullyCrawled
+				+ ", isImagesCrawled=" + isImagesCrawled + ", isSourceExtracted=" + isSourceExtracted
+				+ ", introduction=" + introduction + ", introductionFa=" + introductionFa + ", steps=" + steps
+				+ ", stepsFa=" + stepsFa + ", tips=" + tips + ", tipsFa=" + tipsFa + ", warnings=" + warnings
+				+ ", warningsFa=" + warningsFa + ", thingsYouNeed=" + thingsYouNeed + ", thingsYouNeedFa="
+				+ thingsYouNeedFa + ", related=" + related + ", relatedFa=" + relatedFa + ", citations=" + citations
+				+ ", citationsFa=" + citationsFa + "]";
 	}
 
 	public String getSource() {

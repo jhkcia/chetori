@@ -1,24 +1,25 @@
 package ir.chetori.category.model;
 
-import ir.chetori.core.EntityField;
+import org.mongodb.morphia.annotations.Property;
+
 import ir.chetori.core.entity.BaseEntity;
 
 public class Category extends BaseEntity {
-	@EntityField
+	@Property("name")
 	private String name;
-	@EntityField
+	@Property("href")
 	private String href;
-	
-	@EntityField
+
+	@Property("parentHref")
 	private String parentHref;
 
-	@EntityField
+	@Property("otherParentHref")
 	private String otherParentHref;
 
-	@EntityField
+	@Property("isSubCategoriesCrawled")
 	private boolean isSubCategoriesCrawled;
 
-	@EntityField
+	@Property("isArticlesCrawled")
 	private boolean isArticlesCrawled;
 
 	public Category() {
@@ -63,7 +64,6 @@ public class Category extends BaseEntity {
 	public void setSubCategoriesCrawled(boolean isSubCategoriesCrawled) {
 		this.isSubCategoriesCrawled = isSubCategoriesCrawled;
 	}
-
 
 	@Override
 	public String toString() {

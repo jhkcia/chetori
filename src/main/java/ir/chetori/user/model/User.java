@@ -1,23 +1,24 @@
 package ir.chetori.user.model;
 
-import ir.chetori.core.EntityField;
+import org.mongodb.morphia.annotations.Property;
+
 import ir.chetori.core.entity.BaseEntity;
 
 public class User extends BaseEntity {
-	@EntityField
+	@Property("id")
 	protected String id;
-	@EntityField
+	@Property("firstName")
 	private String firstName;
-	@EntityField
+	@Property("lastName")
 	private String lastName;
-	@EntityField
+	@Property("phoneNumber")
 	private String phoneNumber;
-	@EntityField
+	@Property("password")
 	private String password;
-	@EntityField
+	@Property("token")
 	private String token;
 
-	@EntityField
+	@Property("emailAddress")
 	private String emailAddress;
 
 	public void setId(String id) {
