@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import ir.chetori.article.catalogue.ArticleCatalogue;
 import ir.chetori.article.model.Article;
 import ir.chetori.article.model.ArticleSource;
+import ir.chetori.article.model.ArticleState;
 import ir.chetori.core.EntityEnricherThread;
 import ir.chetori.core.Logger;
 
@@ -60,7 +61,7 @@ public class ArticleSourceEnricherThread extends EntityEnricherThread<Article, A
 	@Override
 	public void onAfterSuccessfullEnrich(Article dirtyEntity, ArticleSource enrichResult) {
 		setArticleAttributes(dirtyEntity, enrichResult);
-		dirtyEntity.setSourceExtracted(true);
+		dirtyEntity.setState(ArticleState.SOURCE_EXTRACTED);
 		try {
 			catalogue.update(dirtyEntity);
 		} catch (IllegalArgumentException | IllegalAccessException e) {

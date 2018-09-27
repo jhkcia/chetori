@@ -124,7 +124,7 @@ public class CategoryScrapper {
 			String ref = el.select("a").attr("href");
 			String src = el.select("a").select("img").attr("src");
 			String name = el.select("a").select(".text").select("p").select("span").html();
-			Article article = new Article(name, ref, src, href);
+			Article article = new Article(name, ref, src);
 			Logger.log("Article found " + article);
 			out.add(article);
 		}

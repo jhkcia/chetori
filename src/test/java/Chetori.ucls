@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="ir.chetori.core.catalogue.BaseCatalogue" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/catalogue/BaseCatalogue.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="160" x="2201" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="ir.chetori.core.EntityEnricherThread" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/EntityEnricherThread.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="369" width="293" x="5927" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="ir.chetori.core.api.BadRequestExceptionMapper" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/api/BadRequestExceptionMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="250" x="88" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.StepsFinder" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/StepsFinder.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="2623" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="ir.chetori.article.image_scrapper.ArticleImageScrapperThread" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/image_scrapper/ArticleImageScrapperThread.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="302" x="5444" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="ir.chetori.article.dao.ArticleDAO" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/dao/ArticleDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="234" x="4215" y="1944"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.WarningsFinder" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/WarningsFinder.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="2874" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.TipsFinder" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/TipsFinder.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="3125" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="ir.chetori.core.api.PageList" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/api/PageList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="139" x="378" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="ir.chetori.core.auth.SecurityFilter" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/auth/SecurityFilter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="316" x="1689" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="ir.chetori.category.scrapper.CategoryScrapper" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/category/scrapper/CategoryScrapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="337" x="557" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="ir.chetori.category.scrapper.FullCrawlResult" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/category/scrapper/FullCrawlResult.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="301" x="6732" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="ir.chetori.article.source_scrapper.ArticleSourceScrapper" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_scrapper/ArticleSourceScrapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="156" x="944" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="ir.chetori.article.model.Article" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/model/Article.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1035" width="188" x="6732" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="ir.chetori.article.source_enricher.part_finder.AbstractSourcePartFinder" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/AbstractSourcePartFinder.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="235" x="3627" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="ir.chetori.article.source_scrapper.ArticleSourceScrapperThread" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_scrapper/ArticleSourceScrapperThread.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="243" x="5786" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="ir.chetori.category.catalogue.CategoryCatalogue" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/category/catalogue/CategoryCatalogue.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="132" x="3520" y="1517"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="ir.chetori.article.source_enricher.part_finder.PartNotFoundException" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/PartNotFoundException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="191" x="1140" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="ir.chetori.user.dao.UserDAO" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/user/dao/UserDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="202" x="3254" y="1944"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="ir.chetori.article.source_enricher.ArticleSourceExtractor" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/ArticleSourceExtractor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="229" x="1371" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="ir.chetori.user.catalogue.UserCatalogue" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/user/catalogue/UserCatalogue.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="180" x="3300" y="1517"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="ir.chetori.core.EntityObjectField" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/EntityObjectField.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="118" x="1640" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="ir.chetori.core.entity.BaseEntity" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/entity/BaseEntity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="108" x="7073" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="ir.chetori.article.model.ArticleStep" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/model/ArticleStep.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="132" x="5718" y="1517"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="ir.chetori.category.api.CategoryEndpoint" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/category/api/CategoryEndpoint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="229" x="4649" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.CitationFinder" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/CitationFinder.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="3376" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="ir.chetori.core.EntityEnrichException" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/EntityEnrichException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="184" x="1798" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.SummaryFinder" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/SummaryFinder.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="3627" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="ir.chetori.user.model.User" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/user/model/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="477" width="167" x="7222" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="ir.chetori.article.source_enricher.part_finder.PartFinderProvider" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/PartFinderProvider.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="272" x="2022" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="ir.chetori.core.api.SystemEndpoint" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/api/SystemEndpoint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="116" x="2045" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.ThingsYouNeedFinder" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/ThingsYouNeedFinder.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="3878" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="ir.chetori.core.BaseEntityDAO" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/BaseEntityDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="387" width="274" x="2986" y="1517"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <annotation id="34" language="java" name="ir.chetori.core.auth.SecuredEndPoint" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/auth/SecuredEndPoint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="122" x="2334" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <class id="35" language="java" name="ir.chetori.article.model.ArticleSource" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/model/ArticleSource.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="513" width="182" x="2401" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="ir.chetori.category.model.Category" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/category/model/Category.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="441" width="222" x="6960" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="ir.chetori.article.image_scrapper.ArticleImageScrapper" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/image_scrapper/ArticleImageScrapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="183" x="2496" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="ir.chetori.article.catalogue.ArticleCatalogue" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/catalogue/ArticleCatalogue.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="234" x="5444" y="1517"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="ir.chetori.core.context.StaticContextAccessor" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/context/StaticContextAccessor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="156" x="2719" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="ir.chetori.article.api.ArticleEndpoint" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/api/ArticleEndpoint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="211" x="4918" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.IntroductionFinder" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/IntroductionFinder.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="235" x="5169" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="ir.chetori.user.api.UserEndPoints" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/user/api/UserEndPoints.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="208" x="4380" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="ir.chetori.category.scrapper.CategoryScrapperThread" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/category/scrapper/CategoryScrapperThread.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="302" x="6069" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="44" language="java" name="ir.chetori.user.model.Role" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/user/model/Role.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="119" x="2915" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="45" language="java" name="ir.chetori.core.api.BaseEndPoint" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/api/BaseEndPoint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="191" x="4609" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="ir.chetori.core.Logger" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/core/Logger.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="99" x="3074" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="ir.chetori.article.source_enricher.ArticleSourceEnricherThread" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/ArticleSourceEnricherThread.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="281" x="6411" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="ir.chetori.article.source_enricher.part_finder.impl.RelatedFinder" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/impl/RelatedFinder.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="4129" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="49" language="java" name="ir.chetori.article.source_enricher.part_finder.PartFinderInterface" 
+    project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/PartFinderInterface.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="235" x="5169" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="50" language="java" name="ir.chetori.article.source_enricher.part_finder.PartDetail" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/source_enricher/part_finder/AbstractSourcePartFinder.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="191" x="3213" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="51" language="java" name="ir.chetori.article.model.ArticleState" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/model/ArticleState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="202" x="6732" y="1517"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="52" language="java" name="ir.chetori.article.image_scrapper.ImageCrawlResult" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/article/image_scrapper/ImageCrawlResult.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="143" x="3444" y="33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="ir.chetori.category.dao.CategoryDAO" project="Chetori" 
+    file="/Chetori/src/main/java/ir/chetori/category/dao/CategoryDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="218" x="2986" y="1944"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="54">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="55">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="58">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <generalization id="59">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="60">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="61" name="userCatalogue"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="64" name="dao"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="66">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="67" name="catalogue"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="70" name="catalogue"/>      
+      <multiplicity id="71" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="72">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="73" name="catalogue"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="75">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <generalization id="76">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="77">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="78" name="steps"/>      
+      <multiplicity id="79" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="80">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="49"/>  
+  </realization>  
+  <association id="81">    
+    <bendpoint x="4618" y="442"/>    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="82" name="userServices"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="84">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="85" name="articles"/>      
+      <multiplicity id="86" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="87">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="88" name="categories"/>      
+      <multiplicity id="89" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="90">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="91" name="instace"/>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="93">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="94">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="95" name="dao"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="97">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="98">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="99">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="100" name="catalogue"/>      
+      <multiplicity id="101" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="102">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="103">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="104" name="dao"/>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="107">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="109">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="110" name="steps"/>      
+      <multiplicity id="111" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="112">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="49"/>  
+  </realization>  
+  <generalization id="113">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="114">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="115" name="userCatalogue"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="117">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <association id="118">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="119" name="state"/>      
+      <multiplicity id="120" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="121">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="122" name="catalogue"/>      
+      <multiplicity id="123" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="124">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="125">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="126" name="userDAO"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="128">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="129">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="130">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="131" name="_catalogue"/>      
+      <multiplicity id="132" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="133">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <generalization id="134">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="135">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="136" name="instance"/>      
+      <multiplicity id="137" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="138">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

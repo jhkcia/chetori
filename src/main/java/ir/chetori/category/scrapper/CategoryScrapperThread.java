@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import ir.chetori.article.catalogue.ArticleCatalogue;
 import ir.chetori.article.model.Article;
+import ir.chetori.article.model.ArticleState;
 import ir.chetori.category.dao.CategoryDAO;
 import ir.chetori.category.model.Category;
 import ir.chetori.core.EntityEnrichException;
@@ -67,17 +68,10 @@ public class CategoryScrapperThread extends EntityEnricherThread<Category, FullC
 			for (Article art : crawlResult.getArticles()) {
 				Article currentArt = catalogue.getByHref(art.getHref());
 				if (currentArt != null) {
-					Logger.log("Duplicate article found " + art.getName() + ", ignored...");
-					String ohref = currentArt.getOtherCategoryHref();
-					if (ohref == null)
-						ohref = "";
-					currentArt.setOtherCategoryHref(ohref + ", " + dirtyEntity.getHref());
-					catalogue.update(currentArt);
 					continue;
 				}
-				art.setFullyCrawled(false);
-				art.setSource(null);
-				art.setImagesCrawled(false);
+				art.setRawSource(null);
+				art.setState(ArticleState.LIGHT_FETCHED);
 				catalogue.add(art);
 			}
 			dirtyEntity.setArticlesCrawled(true);

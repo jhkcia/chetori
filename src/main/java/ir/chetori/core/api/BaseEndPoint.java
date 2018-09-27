@@ -84,7 +84,4 @@ public abstract class BaseEndPoint<T extends BaseEntity> {
 		getCatalogue().update(entity);
 		return getCatalogue().getById(entity.getId());
 	}
-	private void createException() {
-		
-	}
 }

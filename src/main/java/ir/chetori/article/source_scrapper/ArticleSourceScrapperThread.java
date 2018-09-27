@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import ir.chetori.article.catalogue.ArticleCatalogue;
 import ir.chetori.article.model.Article;
+import ir.chetori.article.model.ArticleState;
 import ir.chetori.core.EntityEnrichException;
 import ir.chetori.core.EntityEnricherThread;
 import ir.chetori.core.Logger;
@@ -39,9 +40,8 @@ public class ArticleSourceScrapperThread extends EntityEnricherThread<Article, S
 	@Override
 	public void onAfterSuccessfullEnrich(Article dirtyEntity, String enrichResult) {
 		try {
-			dirtyEntity.setSource(enrichResult);
-			dirtyEntity.setFullyCrawled(true);
-			dirtyEntity.setSourceExtracted(false);
+			dirtyEntity.setRawSource(enrichResult);
+			dirtyEntity.setState(ArticleState.SOURCE_FETCHED);
 			catalogue.update(dirtyEntity);
 		} catch (Exception e) {
 			e.printStackTrace();

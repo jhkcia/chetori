@@ -24,7 +24,7 @@ public class ArticleSourceExtractor {
 
 
 	public static ArticleSource extractSource(Article art) {
-		String source = art.getSource();
+		String source = art.getRawSource();
 		ArticleSource src = new ArticleSource();
 
 		ArrayList<PartFinderInterface> finders = PartFinderProvider.createPartFinders();
@@ -32,14 +32,14 @@ public class ArticleSourceExtractor {
 
 		for (PartFinderInterface f : finders) {
 			try {
-				int idx = f.findStartIndex(art.getSource());
+				int idx = f.findStartIndex(source);
 				parts.put(idx, f);
 			} catch (PartNotFoundException e) {
 				Logger.log("");
 			}
 		}
 		for (Integer index : parts.keySet()) {
-			int minDiff = art.getSource().length() - index;
+			int minDiff = source.length() - index;
 			for (int idx : parts.keySet()) {
 				int diff = idx - index;
 				if (diff > 0 && diff < minDiff)

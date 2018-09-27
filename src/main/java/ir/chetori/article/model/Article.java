@@ -1,5 +1,7 @@
 package ir.chetori.article.model;
 
+import java.util.List;
+
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Property;
 
@@ -14,35 +16,25 @@ public class Article extends BaseEntity {
 
 	@Property("name")
 	private String name;
+
+	@Property("nameFa")
+	private String nameFa;
+
 	@Property("href")
 	private String href;
-	@Property("src")
 
+	@Property("src")
 	private String src;
 
-	@Property("categoryHref")
+	@Property("categories")
+	private List<String> categories;
 
-	private String categoryHref;
+	@Property("state")
+	private ArticleState state;
 
-	@Property("otherCategoryHref")
+	@Property("rawSource")
 
-	private String otherCategoryHref;
-
-	@Property("isFullyCrawled")
-
-	private boolean isFullyCrawled;
-
-	@Property("isImagesCrawled")
-
-	private boolean isImagesCrawled;
-
-	@Property("isSourceExtracted")
-
-	private boolean isSourceExtracted;
-
-	@Property("source")
-
-	private String source;
+	private String rawSource;
 
 	@Property("introduction")
 
@@ -54,14 +46,9 @@ public class Article extends BaseEntity {
 
 	@Property("steps")
 
-	private String steps;
-
-	@Property("stepsFa")
-
-	private String stepsFa;
+	private List<ArticleStep> steps;
 
 	@Property("tips")
-
 	private String tips;
 
 	@Property("tipsFa")
@@ -88,17 +75,9 @@ public class Article extends BaseEntity {
 
 	private String related;
 
-	@Property("relatedFa")
-
-	private String relatedFa;
-
 	@Property("citations")
 
 	private String citations;
-
-	@Property("citationsFa")
-
-	private String citationsFa;
 
 	public String getName() {
 		return name;
@@ -122,22 +101,6 @@ public class Article extends BaseEntity {
 
 	public void setIntroductionFa(String introductionFa) {
 		this.introductionFa = introductionFa;
-	}
-
-	public String getSteps() {
-		return steps;
-	}
-
-	public void setSteps(String steps) {
-		this.steps = steps;
-	}
-
-	public String getStepsFa() {
-		return stepsFa;
-	}
-
-	public void setStepsFa(String stepsFa) {
-		this.stepsFa = stepsFa;
 	}
 
 	public String getTips() {
@@ -196,28 +159,12 @@ public class Article extends BaseEntity {
 		this.related = related;
 	}
 
-	public String getRelatedFa() {
-		return relatedFa;
-	}
-
-	public void setRelatedFa(String relatedFa) {
-		this.relatedFa = relatedFa;
-	}
-
 	public String getCitations() {
 		return citations;
 	}
 
 	public void setCitations(String citations) {
 		this.citations = citations;
-	}
-
-	public String getCitationsFa() {
-		return citationsFa;
-	}
-
-	public void setCitationsFa(String citationsFa) {
-		this.citationsFa = citationsFa;
 	}
 
 	public String getHref() {
@@ -236,72 +183,51 @@ public class Article extends BaseEntity {
 		this.src = src;
 	}
 
-	public String getCategoryHref() {
-		return categoryHref;
-	}
-
-	public void setCategoryHref(String categoryHref) {
-		this.categoryHref = categoryHref;
-	}
-
-	public Article(String name, String href, String src, String categoryHref) {
+	public Article(String name, String href, String src) {
 		super();
 		this.name = name;
 		this.href = href;
 		this.src = src;
-		this.categoryHref = categoryHref;
 	}
 
-	public boolean isFullyCrawled() {
-		return isFullyCrawled;
+	public String getNameFa() {
+		return nameFa;
 	}
 
-	public void setFullyCrawled(boolean isFullyCrawled) {
-		this.isFullyCrawled = isFullyCrawled;
+	public void setNameFa(String nameFa) {
+		this.nameFa = nameFa;
 	}
 
-	@Override
-	public String toString() {
-		return "Article [name=" + name + ", href=" + href + ", src=" + src + ", categoryHref=" + categoryHref
-				+ ", otherCategoryHref=" + otherCategoryHref + ", isFullyCrawled=" + isFullyCrawled
-				+ ", isImagesCrawled=" + isImagesCrawled + ", isSourceExtracted=" + isSourceExtracted
-				+ ", introduction=" + introduction + ", introductionFa=" + introductionFa + ", steps=" + steps
-				+ ", stepsFa=" + stepsFa + ", tips=" + tips + ", tipsFa=" + tipsFa + ", warnings=" + warnings
-				+ ", warningsFa=" + warningsFa + ", thingsYouNeed=" + thingsYouNeed + ", thingsYouNeedFa="
-				+ thingsYouNeedFa + ", related=" + related + ", relatedFa=" + relatedFa + ", citations=" + citations
-				+ ", citationsFa=" + citationsFa + "]";
+	public ArticleState getState() {
+		return state;
 	}
 
-	public String getSource() {
-		return source;
+	public void setState(ArticleState state) {
+		this.state = state;
 	}
 
-	public void setSource(String source) {
-		this.source = source;
+	public String getRawSource() {
+		return rawSource;
 	}
 
-	public boolean isSourceExtracted() {
-		return isSourceExtracted;
+	public void setRawSource(String rawSource) {
+		this.rawSource = rawSource;
 	}
 
-	public void setSourceExtracted(boolean isSourceExtracted) {
-		this.isSourceExtracted = isSourceExtracted;
+	public List<String> getCategories() {
+		return categories;
 	}
 
-	public String getOtherCategoryHref() {
-		return otherCategoryHref;
+	public void setCategories(List<String> categories) {
+		this.categories = categories;
 	}
 
-	public void setOtherCategoryHref(String otherCategoryHref) {
-		this.otherCategoryHref = otherCategoryHref;
+	public List<ArticleStep> getSteps() {
+		return steps;
 	}
 
-	public boolean isImagesCrawled() {
-		return isImagesCrawled;
-	}
-
-	public void setImagesCrawled(boolean isImagesCrawled) {
-		this.isImagesCrawled = isImagesCrawled;
+	public void setSteps(List<ArticleStep> steps) {
+		this.steps = steps;
 	}
 
 }

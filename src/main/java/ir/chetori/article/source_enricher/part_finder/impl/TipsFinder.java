@@ -7,7 +7,7 @@ import ir.chetori.article.model.ArticleSource;
 import ir.chetori.article.source_enricher.part_finder.AbstractSourcePartFinder;
 
 public class TipsFinder extends AbstractSourcePartFinder {
-	private static List<String> constants = Arrays.asList("==Steps==", "== Steps ==");
+	private static List<String> constants = Arrays.asList("== Tips ==", "==Tips==");
 
 	@Override
 	public List<String> getConstants() {
@@ -16,7 +16,7 @@ public class TipsFinder extends AbstractSourcePartFinder {
 
 	@Override
 	protected void setValue(ArticleSource article, String newValue) {
-		article.setSteps(newValue);
+		article.setTips(newValue);
 	}
 
 }

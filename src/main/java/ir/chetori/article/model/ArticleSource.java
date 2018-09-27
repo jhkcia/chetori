@@ -1,5 +1,7 @@
 package ir.chetori.article.model;
 
+import java.util.List;
+
 public class ArticleSource {
 
 
@@ -8,7 +10,7 @@ public class ArticleSource {
 	}
 
 	private String introduction;
-	private String steps;
+	private List<ArticleStep> steps;
 	private String tips;
 	private String warnings;
 	private String thingsYouNeed;
@@ -24,11 +26,11 @@ public class ArticleSource {
 		this.introduction = introduction;
 	}
 
-	public String getSteps() {
+	public List<ArticleStep> getSteps() {
 		return steps;
 	}
 
-	public void setSteps(String steps) {
+	public void setSteps(List<ArticleStep> steps) {
 		this.steps = steps;
 	}
 
